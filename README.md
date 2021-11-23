@@ -1,4 +1,4 @@
 # parallel
-summary of parallelisation examples focussing on fortran + omp
+A collection of parallelisation examples focussing on fortran + omp + mpi
 
-![wind](fraktal/fraktal.png)
+![fraktal](fraktal/fraktal.png)

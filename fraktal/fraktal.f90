@@ -7,7 +7,7 @@ program fraktal
   integer, parameter :: p=selected_real_kind(16), dim=1024, maxiter=1e5
   integer :: threads=1, n, iterations(dim,dim)=0, row, col
   real(kind=p), parameter :: eps=1.e-16_p
-  real(kind=p), parameter :: xi=-10._p, xe=-8._p, dx=abs(xi-xe)/real(dim,kind=p)
+  real(kind=p), parameter :: xi=-10._p, xe=-4._p, dx=abs(xi-xe)/real(dim,kind=p)
   real(kind=p), parameter :: yi=-2._p, ye=2._p, dy=abs(yi-ye)/real(dim,kind=p)
   real(kind=p) :: x, y, tic, toc
   complex(kind=p) :: z, z0
@@ -58,6 +58,7 @@ program fraktal
         y = yi + col * dy
         write(1,*) x, y, iterations( row, col )
      end do
+     write(1,*)
   end do
 
 end program fraktal

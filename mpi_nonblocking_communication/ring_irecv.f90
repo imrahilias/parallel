@@ -17,7 +17,7 @@ program ring
   sum = 0
   sndbuf = rank
   do i = 1, size
-     call mpi_irecv(rcvbuf, 1, mpi_integer, left,  17, mpi_comm_world, request) ! recieving has to be first line now.
+     call mpi_irecv(rcvbuf, 1, mpi_integer, left,  17, mpi_comm_world, request) ! receiving has to be first line now.
      call mpi_ssend(sndbuf, 1, mpi_integer, right, 17, mpi_comm_world)
      call mpi_wait(request, status) ! do not write to the same buffer between isend()/irecv() and wait().
      if (.not. mpi_async_protects_nonblocking) call mpi_f_sync_reg( rcvbuf ) ! protect the buffer used in isend().

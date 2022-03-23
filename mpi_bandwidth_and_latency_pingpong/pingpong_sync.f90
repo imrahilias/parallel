@@ -1,4 +1,4 @@
-program pingpongbandwidthsync
+program pingpong_sync
 
   use mpi_f08
 
@@ -54,4 +54,4 @@ program pingpongbandwidthsync
 
   call mpi_finalize()
 
-end program pingpongbandwidthsync
+end program pingpong_sync

@@ -1,17 +1,26 @@
 # pingpong
-comparing mpi_send() with mpi_ssend() in a simple pingpong program for
-package sizes from 8 bytes to 2 megabytes.
 
-## bandwith
+Comparing `mpi_send()` with `mpi_ssend()` in a simple pingpong program
+for package sizes from 8 bytes to 2 megabytes.
+
+
+## Use
+
+Type `make` to compile and run the program `pingpong`.
+
+
+## Bandwith
 the bandwidth increases first with the package size, before declining
 again for larger packets. sync/async impact nicely decreases with
 package size.
 
-## latency
+
+## Latency
 the latency, thus transfer time using smallest package size, is
 heavily affected by sync/async send.
 
-## syncronous
+
+## Syncronous `mpi_ssend()`
 
 | buffer size /bytes | transfer time / us | bandwidth / mb/s |
 |--------------------|--------------------|------------------|
@@ -20,7 +29,8 @@ heavily affected by sync/async send.
 | 32768              | 12.830             | 2553.974         |
 | 2097152            | 1633.034           | 1284.205         |
 
-## asyncronous
+
+## Asyncronous `mpi_send()`
 
 | buffer size /bytes | transfer time / us | bandwidth / mb/s |
 |--------------------|--------------------|------------------|

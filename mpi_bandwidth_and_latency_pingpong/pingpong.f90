@@ -1,4 +1,4 @@
-program pingpongbandwidth
+program pingpong
 
   use mpi_f08
 
@@ -54,4 +54,4 @@ program pingpongbandwidth
 
   call mpi_finalize()
 
-end program pingpongbandwidth
+end program pingpong
